@@ -1,0 +1,79 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magneto - Gestión de Vacantes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Vacantes - Magneto</h1>
+        <div id="user-section">
+            <button id="login-btn">Iniciar Sesión</button>
+            <button id="register-btn">Registrarse</button>
+            <button id="logout-btn" style="display:none;">Cerrar Sesión</button>
+            <span id="user-greeting" style="display:none;"></span>
+        </div>
+    </header>
+    <main>
+        <section id="form-section" style="display:none;">
+            <h2>Publicar Nueva Vacante</h2>
+            <form id="vacancy-form">
+                <label for="industry">Industria:</label>
+                <input type="text" id="industry" name="industry" required>
+
+                <label for="location">Ubicación:</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="position">Puesto:</label>
+                <input type="text" id="position" name="position" required>
+
+                <label for="description">Descripción:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <button type="submit">Publicar Vacante</button>
+            </form>
+        </section>
+        <section id="vacancies-section">
+            <h2>Vacantes Publicadas</h2>
+            <div id="vacancies-list">
+                <!-- Vacantes aparecerán aquí -->
+            </div>
+        </section>
+    </main>
+
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="login-form" class="auth-form" style="display:none;">
+                <h2>Iniciar Sesión</h2>
+                <form id="login">
+                    <label for="login-username">Usuario:</label>
+                    <input type="text" id="login-username" name="login-username" required>
+
+                    <label for="login-password">Contraseña:</label>
+                    <input type="password" id="login-password" name="login-password" required>
+
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+            </div>
+            <div id="register-form" class="auth-form" style="display:none;">
+                <h2>Registrarse</h2>
+                <form id="register">
+                    <label for="register-username">Usuario:</label>
+                    <input type="text" id="register-username" name="register-username" required>
+
+                    <label for="register-password">Contraseña:</label>
+                    <input type="password" id="register-password" name="register-password" required>
+
+                    <button type="submit">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
